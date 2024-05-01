@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>hump day</title>
+  </head>
+  <body>
+    <h1>Embedding in Tableau</h1>
+    <div class="mainButtons">
+      <input
+        type="button"
+        value="Oregon and Washington Only"
+        class="buttons"
+        id="oregon_and_washington_only_button"
+      />
+      <input
+        type="button"
+        value="Clear Filter"
+        class="buttons"
+        id="clear_filter_button"
+      />
+      <input type="button" value="Undo" class="buttons" id="undo_button" />
+    </div>
+    <div class="mainContent">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="bottom"
+        hide-tabs
+      >
+      </tableau-viz>
+    </div>
+  </body>
+</html>
